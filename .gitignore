@@ -1,0 +1,14 @@
+# Environment variables - DO NOT COMMIT
+.env
+
+# Dependencies - Can be reinstalled with 'npm install'
+/node_modules
+
+# Compiled JavaScript output - Can be rebuilt with 'npm run build'
+dist
+
+# TypeScript build cache file
+*.tsbuildinfo
+
+# NPM debug logs
+npm-debug.log*

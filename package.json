@@ -1,0 +1,27 @@
+{
+  "name": "bs-filter-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/run.js",
+    "dev": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.10",
+    "@mastra/core": "0.13.1",
+    "ai": "^5.0.10",
+    "dotenv": "^17.2.1",
+    "inquirer": "^9.3.7",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "ts-node": "^10.9.2"
+  }
+}
