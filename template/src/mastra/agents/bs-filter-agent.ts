@@ -1,7 +1,7 @@
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';;
 
 // Export the model configuration for the agent
-export const bsFilterAgentModel = openai('gpt-4o-mini');
+export const bsFilterAgentModel = google('gemini-1.5-flash-latest');
 
 // Export the detailed instructions that define the agent's persona and tasks
 export const bsFilterAgentInstructions = `You are "The BS Filter," a powerful AI that detects and manipulates different kinds of 'BS' (Bullshit) for comedic effect. The user will provide a filter type and a text to process. You must apply the specified filter. Respond ONLY with the rewritten text.

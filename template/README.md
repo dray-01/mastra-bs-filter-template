@@ -73,8 +73,14 @@ To run the interactive tester application on your local machine, follow these st
     This will compile the project and start the interactive command-line interface.
 
 ---
-## Environment Variables 🔑
+## Environment Variables
 
-This template requires an OpenAI API key to function.
+This template requires a Google AI API key to function.
 
-* `OPENAI_API_KEY`: Your API key from the OpenAI Platform. You can get one at [platform.openai.com/api-keys](https://platform.openai.com/api-keys).
+1.  Create a **`.env`** file in the root of your project.
+2.  Add your API key to the file:
+
+    ```
+    GOOGLE_GENERATIVE_AI_API_KEY="your-google-api-key-here"
+    ```
+You can get a free API key at the [Google AI Studio](https://makersuite.google.com/app/apikey).

@@ -1,18 +1,26 @@
-// 1. Correct import path and function name
+/**
+ * A simple Mastra tool for counting words in a string.
+ */
 import { createTool } from '@mastra/core/tools';
 import { z } from 'zod';
 
 export const wordCounter = createTool({
-  // 2. Property is 'id', not 'name'
-  id: 'word_counter', 
+  // The unique identifier for this tool.
+  id: 'word_counter',
+
+  // A clear description of what the tool does for the AI to understand.
   description: 'Counts the number of words in a given text.',
+
+  // Defines the expected input using a Zod schema for validation.
   inputSchema: z.object({
     text: z.string().describe('The text to count words in.'),
   }),
-  // 3. The execute function receives 'context'
-  execute: async ({ context }) => { 
-    // The input data is inside the 'context' object
+
+  // The main logic of the tool.
+  execute: async ({ context }) => {
+    // We trim whitespace and split the string by spaces to get an array of words.
     const wordCount = context.text.trim().split(/\s+/).length;
+    // The tool must return an object matching its implicit output schema.
     return { wordCount };
   },
 });
